@@ -30,8 +30,12 @@ Two seats review the same packet each round:
 
 1. **Build the packet** at `council/round-N-packet.md`: full current document,
    review instructions (major concerns, minor concerns, concrete refinements),
-   the fabrication hunt, and — rounds 2+ — the other seat's previous critique
-   under "A previous reviewer said: …".
+   the fabrication hunt, and — rounds 2+ — the other seat's carried-over
+   points as a NUMBERED list under "A previous reviewer said: …", with this
+   instruction: "Answer every numbered point with a verdict: AGREE, AGREE
+   WITH CHANGE (concern accepted, different fix — say which), or REBUT
+   (reason)." Round 1 critiques stay free-form; verdicts apply only to
+   cross-examination rounds.
 2. **Seat 1 critique.** Best: tell the user to open a NEW chat (fresh eyes,
    any model from the picker) with the prompt "Review council/round-N-packet.md
    strictly on its own terms and return a full critique", and paste the result
@@ -39,9 +43,12 @@ Two seats review the same packet each round:
    the packet text — state that fresh-eyes review was skipped.
 3. **Seat 2 critique.** Hand the user the packet path and wait for the pasted
    external critique. Do not proceed without it (see hard rule 5).
-4. **Merge and arbitrate.** Deduplicate the two critiques into a numbered
-   refinement list. For each: plain-language pros and cons, then ask
-   accept/reject. Apply accepted edits to the document.
+4. **Merge and arbitrate.** Rounds 2+: first tally each carried-over point as
+   settled (AGREE, or conceded after rebuttal) or disputed. A point a seat
+   left without a verdict is a hole in that review — return the packet for
+   that seat to complete; do not guess its position. Then deduplicate the two
+   critiques into a numbered refinement list. For each: plain-language pros
+   and cons, then ask accept/reject. Apply accepted edits to the document.
 5. **Checkpoint.** Append the round's verdicts (accepted, rejected, still
    disputed) to `council/LOG.md`. Tell the user to commit the document, the
    packet, and the log now — before round N+1.
