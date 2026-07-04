@@ -28,7 +28,10 @@ Two seats review the same packet each round:
 
 ## Round N protocol
 
-1. **Build the packet** at `council/round-N-packet.md`: full current document,
+1. **Build the packet** at `council/round-N-packet.md` (round 1: one shared
+   packet; rounds 2+: per-seat packets `round-N-packet-seat1.md` /
+   `round-N-packet-seat2.md`, since each seat carries the OTHER seat's
+   points): full current document,
    review instructions (major concerns, minor concerns, concrete refinements),
    the fabrication hunt, and — rounds 2+ — the other seat's carried-over
    points as a NUMBERED list under "A previous reviewer said: …", with this
